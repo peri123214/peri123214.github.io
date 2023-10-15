@@ -24,10 +24,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    height: 7%;
+    min-height: 70px;
     width: 100%;
-    padding: 20px 100px;
     /*background: rgba(0, 0, 0, 0.3);*/
-    background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
+    background: #171717;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,10 +36,26 @@ body {
 }
 
 .logo {
+    min-height: 100%;
     font-size: 32px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    padding: 25px 15px;
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.navbar {
+    margin-right: 25px;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex: 0 0 auto;
 }
 
 .navbar a {
@@ -50,7 +67,9 @@ body {
     margin-left: 25px;
 }
 
-.links a {
+.links {
+    padding: 10px 20px;
+    margin: 0 5px;
     position: relative;
     font-size: 18px;
     color: #fff;
@@ -66,8 +85,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #fff;
-    transition: .5s;
+    background: #00aaff;
 }
 
 .links:hover::before {
@@ -79,11 +97,53 @@ body {
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 25px;
-    border: 3px solid seagreen;
+    border: 3px solid #00aaff;
     transition: .3s;
 }
 
 .btn_bg:hover {
-    background: rgb(46, 163, 87);
-    border: 3px solid rgb(46, 163, 87);
+    background: #00aaff;
+    border: 3px solid #00aaff;
 }
+
+.navbar_frame_logo {
+    background-color: #00aaff;
+    max-height: 100%;
+    display: flex;
+    flex: 0 0 auto;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+.navbar_links {
+    width: 150px;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(90% 0%, 100% 33%, 100% 66%, 90% 100%, 0% 100%, 10% 66%, 10% 33%, 0% 0%);
+    margin-left: -10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar_links a{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items:center;
+    z-index: 15;
+}
+
+.navbar_links:hover {
+    background-color: #272727;
+}
+
+    /*clip-path: polygon(0% 0%, 90% 0%, 100% 33%, 100% 66%, 90% 100%, 0% 100%);*/ /*Logo shape (cut on right side)*/
+ 
+    /*clip-path: polygon(90% 0%, 100% 33%, 100% 66%, 90% 100%, 0% 100%, 10% 66%, 10% 33%, 0% 0%);*/ /*Link shape (cut on both sides)*/ 
+
+    /*clip-path: polygon(100% 0%, 100% 100%, 10% 100%, 20% 66%, 20% 33%, 10% 0%);*/ /*Dashboard shape (cut on left side)*/
